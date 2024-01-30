@@ -6,11 +6,10 @@ export default function Home() {
   const [userDate, setUserDate] = useState('');
   const [apodData, setApodData] = useState(null);
   const [error, setError] = useState(null);
-
+  
   const handleFetchData = () => {
     if (userDate.trim() !== '') {
       const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=cch1fD12dqyadllOoD2fXeQqM5GoW0t4l8WAkjSr&date=${userDate}&concept_tags=True`;
-
       fetch(apiUrl)
         .then((response) => {
           if (!response.ok) {
