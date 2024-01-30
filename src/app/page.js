@@ -40,7 +40,7 @@ export default function Home() {
           className="size-36 w-1/4"
         />
         <h2 className="px-64 pt-10 font-mono text-center">Embark on a celestial journey with our NASA's "Astronomy Picture of the Day" viewer, where the wonders of the universe unfold at your fingertips. Explore the breathtaking beauty of the cosmos, one date at a time.</h2>
-        <h2 className="px-64 pt-10 font-mono text-center">Join us in this cosmic odyssey, where each day brings a unique celestial revelation. Take a voyage through time and space, and let the universe's mysteries captivate your imagination. Buckle up, stargazers, and prepare for an astronomical adventure like no other!</h2>
+        <h2 className="px-64 pt-10 font-mono text-center">Join us in this cosmic odyssey, where each day brings a unique celestial revelation. Take a voyage through time and space, and let the universe's mysteries captivate your imagination.</h2>
         <br/>
         <label className="font-mono">
           Enter a date starting from 1995-06-16 (YYYY-MM-DD): 
