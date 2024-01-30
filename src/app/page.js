@@ -59,7 +59,7 @@ export default function Home() {
           Submit
         </button>
 
-        <button onClick={handleClearData}>
+        <button onClick={handleClearData} className="mt-4 px-9 font-mono bg-gray-500 rounded-md border-2 border-white">
           Clear
         </button>
         <br></br>
