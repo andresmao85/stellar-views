@@ -36,32 +36,42 @@ export default function Home() {
 
   return (
     <>
-      <div className="main-container"> {/* Apply the styles for the main container */}
-        <label>
-          Enter a date starting from 1995-06-16 (YYYY-MM-DD):
+      <div className="grid justify-items-center pt-6"> 
+        <img
+          src="/stellar_views.png"
+          alt="stellar-views"
+          className="size-36 w-1/4"
+        />
+        <h2 className="px-64 pt-10 font-mono text-center">Embark on a celestial journey with our NASA's "Astronomy Picture of the Day" viewer, where the wonders of the universe unfold at your fingertips. Explore the breathtaking beauty of the cosmos, one date at a time.</h2>
+        <h2 className="px-64 pt-10 font-mono text-center">Join us in this cosmic odyssey, where each day brings a unique celestial revelation. Take a voyage through time and space, and let the universe's mysteries captivate your imagination.</h2>
+        <br/>
+        <label className="font-mono">
+          Enter a date starting from 1995-06-16 (YYYY-MM-DD): 
           <input
             type="text"
             value={userDate}
             onChange={(e) => setUserDate(e.target.value)}
+            className=" ml-2 w-24 rounded-md"
           />
         </label>
-        
-        <button onClick={handleFetchData}>
+        <br></br>
+        <button onClick={handleFetchData} className="px-8 font-mono bg-gray-500 rounded-md border-2 border-white">
           Submit
         </button>
 
         <button onClick={handleClearData}>
           Clear
         </button>
-
+        <br></br>
         {error && <p>Error: {error}</p>}
 
         {apodData && (
-          <div>
+          <div className="grid justify-items-center pt-6">
             {apodData.media_type === "image" ? (
               <img
                 src={apodData.url}
                 alt={apodData.title}
+                
               />
             ) : (
               <iframe
@@ -73,8 +83,10 @@ export default function Home() {
               />
             )}
 
-            <h1>{apodData.title}</h1>
-            <p>Date: {apodData.date}</p>
+            <h1  className="font-mono">{apodData.title}</h1>
+            <p className="font-mono">Date: {apodData.date}</p>
+            <br/>
+            <br/>
           </div>
         )}
       </div>
