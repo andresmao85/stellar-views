@@ -59,7 +59,7 @@ export default function Home() {
         {error && <p>Error: {error}</p>}
 
         {apodData && (
-          <div>
+          <div className="grid justify-items-center pt-6">
             {apodData.media_type === "image" ? (
               <img
                 src={apodData.url}
@@ -76,8 +76,10 @@ export default function Home() {
               />
             )}
 
-            <h1>{apodData.title}</h1>
-            <p>Date: {apodData.date}</p>
+            <h1  className="font-mono">{apodData.title}</h1>
+            <p className="font-mono">Date: {apodData.date}</p>
+            <br/>
+            <br/>
           </div>
         )}
       </div>
