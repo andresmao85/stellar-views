@@ -1,9 +1,6 @@
 "use client"
 
-// Home.js
-
 import { useState } from "react";
-import './global.css'; // Import the global CSS file
 
 export default function Home() {
   const [userDate, setUserDate] = useState('');
@@ -34,6 +31,10 @@ export default function Home() {
     }
   };
 
+  const handleClearData = () => {
+    setApodData(null);
+  }
+
   return (
     <>
       <div className="main-container"> {/* Apply the styles for the main container */}
@@ -48,6 +49,10 @@ export default function Home() {
         
         <button onClick={handleFetchData}>
           Submit
+        </button>
+
+        <button onClick={handleClearData}>
+          Clear
         </button>
 
         {error && <p>Error: {error}</p>}
@@ -71,7 +76,6 @@ export default function Home() {
 
             <h1>{apodData.title}</h1>
             <p>Date: {apodData.date}</p>
-            {/* Additional rendering of other data fields as needed */}
           </div>
         )}
       </div>
