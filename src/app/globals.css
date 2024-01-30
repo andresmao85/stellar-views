@@ -16,3 +16,12 @@
   }
 }
 
+input {
+  background-color: lightgray;
+  color: black;
+}
+
+/* Styles for the image element */
+img {
+  height: 500px;
+}
